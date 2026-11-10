@@ -3,7 +3,9 @@
   var C = window.MENU_CONFIG;
   var CATS = Object.assign({}, window.MENU_CATS, C.extraCats || {});
   var ITEMS = window.MENU_ITEMS.concat(C.extraItems || []);
-  var IMG = C.images || {};
+  var IMG = Object.assign({}, C.images || {});
+  (window.MENU_PHOTOS || []).forEach(function (id) { if (!(id in IMG)) IMG[id] = '/assets/p/' + id + '.jpg'; });
+  var POS = window.MENU_POS || {};
   var TAGS = {pop: ['fire', 'Popular'], hot: ['fire', 'Picante'], veg: ['leaf', 'Veggie'], new: ['star', 'Nuevo'], share: ['party', 'Para compartir']};
   var app = document.getElementById('app');
   var mesa = new URLSearchParams(location.search).get('mesa');
@@ -26,7 +28,7 @@
   function thumb(x) {
     var src = IMG[x.id];
     var icon = x.i || CATS[x.c].i;
-    return src ? '<img src="' + src + '" alt="' + esc(x.n) + '" loading="lazy">' : ic(icon);
+    return src ? '<img src="' + src + '" alt="' + esc(x.n) + '" loading="lazy"' + (POS[x.id] ? ' style="object-position:' + POS[x.id] + '"' : '') + '>' : ic(icon);
   }
 
   function itemHTML(x) {

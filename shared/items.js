@@ -63,3 +63,8 @@ window.MENU_CATS = {
 
   window.MENU_ITEMS = L;
 })();
+
+// Fotos genéricas disponibles en /assets/p/<id>.jpg (el local puede reemplazarlas en config.images).
+window.MENU_PHOTOS = ["b-clasica", "b-cheese", "b-smash", "b-crispy", "b-veggie", "p-muzza", "p-napo", "p-calab", "p-4q", "p-pepe", "pic-casa", "pic-4", "pic-pollo", "pic-provo", "a-papas", "a-ched", "a-ens", "c-pilsen", "c-brahma", "c-heine", "c-ipa", "t-caipi", "t-mojito", "t-marg", "t-aperol", "t-fernet", "t-moscow", "t-pina", "s-jugo", "s-limon", "s-cafe", "su-cali", "su-combo", "br-panq", "br-capu", "br-lic", "a-mand", "g-jarra", "g-festejo", "g-after", "c-corona", "br-tostado", "t-gin"];
+// Encuadre de fotos oscuras o con el producto descentrado.
+window.MENU_POS = {'c-ipa': '78% 62%'};
