@@ -66,7 +66,6 @@
   }
 
   app.innerHTML =
-    (C.demoBanner ? '<div class="demo">Menú de demostración · Tekoha Systems <a href="https://wa.me/595986616939?text=' + encodeURIComponent('Hola! Quiero un menú digital con NFC para mi local') + '" target="_blank" rel="noopener">Quiero esto para mi local</a></div>' : '') +
     '<div class="wrap">' +
     '<header class="hero"><img class="cover" src="' + C.cover + '" alt=""><div class="glow"></div></header>' +
     '<div class="brand"><div class="badge"><img src="' + C.logo + '" alt="' + esc(C.name) + '"></div><div><h1>' + esc(C.name) + '</h1><p>' + esc(C.tagline) + '</p></div></div>' +
@@ -75,12 +74,14 @@
     '<nav class="cats" id="cats">' + order.map(function (k) { return '<a class="chip" href="#c-' + k + '" data-k="' + k + '">' + ic(CATS[k].i) + CATS[k].n + '</a>'; }).join('') + '</nav>' +
     '<main id="main">' + order.map(secHTML).join('') + '</main>' +
     '<div id="extras">' + footerCards() + '</div>' +
-    '<footer class="foot"><div class="links">' +
+    '<footer class="foot"><button class="toplogo" id="top" aria-label="Volver arriba"><img src="' + C.logo + '" alt=""></button><div class="links">' +
     (C.instagram ? '<a href="https://instagram.com/' + C.instagram + '" target="_blank" rel="noopener">' + ic('insta') + '@' + C.instagram + '</a>' : '') +
-    '</div>Precios en guaraníes, IVA incluido.<small>Los precios y productos son de ejemplo.</small></footer>' +
+    '</div>Precios en guaraníes, IVA incluido.</footer>' +
     (C.waiter ? '<a class="fab" href="' + wa((mesa ? 'Mesa ' + mesa + ': ' : '') + 'Necesitamos atención, por favor') + '" target="_blank" rel="noopener">' + ic('bell') + 'Llamar al mozo</a>' : '') +
     '</div>' +
     '<div class="sheet-bg" id="bg"></div><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>';
+
+  document.getElementById('top').onclick = function () { window.scrollTo({top: 0, behavior: 'smooth'}); };
 
   // detalle del producto
   var sheet = document.getElementById('sheet');

@@ -13,9 +13,6 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:560px;margin:0 auto;min-height:100dvh;background:var(--bg);position:relative;overflow:hidden}
 @media(min-width:600px){body{background:radial-gradient(ellipse at 50% 0,var(--bg2),#000 70%)}.wrap{box-shadow:0 0 0 1px var(--line),0 30px 90px rgba(0,0,0,.6)}}
 
-/* franja demo */
-.demo{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;background:var(--accent);color:var(--on-accent);font-size:12px;font-weight:600;padding:7px 12px;text-align:center}
-.demo a{text-decoration:underline}
 
 /* hero */
 .hero{position:relative;height:290px;overflow:hidden}
@@ -82,6 +79,9 @@ main{padding:6px 16px 20px}
 .foot .links{display:flex;justify-content:center;gap:16px;margin-bottom:10px}
 .foot .links a{display:inline-flex;align-items:center;gap:6px;color:var(--text)}
 .foot small{display:block;margin-top:6px;opacity:.7}
+.toplogo{display:block;width:46px;height:46px;margin:0 auto 14px;border-radius:50%;background:#fff;border:2px solid var(--accent);overflow:hidden;transition:transform .2s}
+.toplogo:active{transform:scale(.92)}
+.toplogo img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* botón mozo */
 .fab{position:fixed;right:max(16px,calc(50% - 264px));bottom:18px;z-index:40;display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:800;font-size:14px;box-shadow:0 10px 28px rgba(0,0,0,.5),var(--glow)}

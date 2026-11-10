@@ -11,7 +11,6 @@ window.MENU_CONFIG = {
   whatsapp: '595000000000',
   reviewUrl: 'https://search.google.com/local/writereview?placeid=PLACE_ID_DEL_LOCAL',
   waiter: true,
-  demoBanner: true,
   reserve: {
     title: 'Reservas exclusivas',
     text: 'Festejos, after office y eventos corporativos.',
